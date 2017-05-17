@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: dockernodemicro1
+spec:
+  selector:
+    deployment: dockernodemicro1
+  ports:
+    -
+      protocol: TCP
+      port: 80
+      targetPort: 3000
+      name: http
+  type: LoadBalancer
